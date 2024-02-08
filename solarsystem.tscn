@@ -1,0 +1,128 @@
+[gd_scene load_steps=11 format=3 uid="uid://cf4risl4ihy75"]
+
+[ext_resource type="Script" path="res://Rotate.gd" id="2_rpse0"]
+[ext_resource type="Texture2D" uid="uid://g4b6627u3x7a" path="res://mars.png" id="2_w215r"]
+[ext_resource type="Texture2D" uid="uid://co0voael1h18x" path="res://sun.png" id="3_14yai"]
+[ext_resource type="Texture2D" uid="uid://t70vpxjjdrfy" path="res://space!!.jpg" id="3_ypc74"]
+[ext_resource type="Script" path="res://comet.gd" id="4_5u8uh"]
+[ext_resource type="Texture2D" uid="uid://basi0jwy84bta" path="res://Venus-PNG-Background.png" id="4_s8077"]
+[ext_resource type="Texture2D" uid="uid://bvm12x3vd0f3j" path="res://earth.webp" id="5_pymis"]
+[ext_resource type="Texture2D" uid="uid://c2s5nf43p7cyh" path="res://moon.png" id="6_84kgk"]
+[ext_resource type="Texture2D" uid="uid://c5flvxa6voig4" path="res://jupijuper.png" id="6_jy1a6"]
+[ext_resource type="Texture2D" uid="uid://m4luhwguor5d" path="res://pngimg.com - asteroid_PNG17.png" id="8_q4abd"]
+
+[node name="Sun" type="Node2D"]
+
+[node name="Planet" type="Node2D" parent="."]
+position = Vector2(582, 310)
+script = ExtResource("2_rpse0")
+rotation_speed = 0.0046
+
+[node name="Icon2" type="Sprite2D" parent="Planet"]
+position = Vector2(126, 1)
+scale = Vector2(0.0544, 0.0566)
+texture = ExtResource("2_w215r")
+script = ExtResource("2_rpse0")
+rotation_speed = 0.01
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(582, 310)
+scale = Vector2(0.0604, 0.0604)
+texture = ExtResource("3_14yai")
+script = ExtResource("2_rpse0")
+rotation_speed = 0.001
+
+[node name="Planet2" type="Node2D" parent="."]
+position = Vector2(582, 310)
+script = ExtResource("2_rpse0")
+rotation_speed = 0.0026
+
+[node name="Icon2" type="Sprite2D" parent="Planet2"]
+position = Vector2(236, 0)
+scale = Vector2(0.0944, 0.0982)
+texture = ExtResource("4_s8077")
+script = ExtResource("2_rpse0")
+rotation_speed = 0.007
+
+[node name="Planet3" type="Node2D" parent="."]
+position = Vector2(582, 310)
+script = ExtResource("2_rpse0")
+rotation_speed = 0.001
+
+[node name="Node2D" type="Node2D" parent="Planet3"]
+position = Vector2(331, 0)
+scale = Vector2(0.0551, 0.0573)
+script = ExtResource("2_rpse0")
+rotation_speed = 0.003
+
+[node name="Sprite2D" type="Sprite2D" parent="Planet3/Node2D"]
+position = Vector2(900, 0)
+texture = ExtResource("6_84kgk")
+script = ExtResource("2_rpse0")
+rotation_speed = 0.005
+
+[node name="Icon2" type="Sprite2D" parent="Planet3"]
+position = Vector2(331, 1.14441e-05)
+scale = Vector2(0.0551, 0.0573)
+texture = ExtResource("5_pymis")
+script = ExtResource("2_rpse0")
+rotation_speed = 0.01
+
+[node name="Planet4" type="Node2D" parent="."]
+position = Vector2(582, 310)
+script = ExtResource("2_rpse0")
+rotation_speed = 0.0006
+
+[node name="Icon2" type="Sprite2D" parent="Planet4"]
+position = Vector2(434, 9.05991e-06)
+scale = Vector2(0.0602, 0.0626)
+texture = ExtResource("2_w215r")
+script = ExtResource("2_rpse0")
+rotation_speed = 0.008
+
+[node name="Planet5" type="Node2D" parent="."]
+position = Vector2(582, 310)
+script = ExtResource("2_rpse0")
+rotation_speed = 0.0003
+
+[node name="Icon2" type="Sprite2D" parent="Planet5"]
+position = Vector2(581, 9.53674e-06)
+scale = Vector2(0.3843, 0.3997)
+texture = ExtResource("6_jy1a6")
+script = ExtResource("2_rpse0")
+rotation_speed = 0.003
+
+[node name="Node2D" type="Node2D" parent="Planet5"]
+position = Vector2(581, 0)
+scale = Vector2(0.0551, 0.0573)
+script = ExtResource("2_rpse0")
+rotation_speed = 0.0015
+
+[node name="Sprite2D" type="Sprite2D" parent="Planet5/Node2D"]
+position = Vector2(1200, 0)
+texture = ExtResource("6_84kgk")
+script = ExtResource("2_rpse0")
+rotation_speed = 0.005
+
+[node name="Space!!" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(577, 326)
+scale = Vector2(3.84667, 3.84524)
+texture = ExtResource("3_ypc74")
+
+[node name="comet" type="Node2D" parent="."]
+position = Vector2(582, 310)
+script = ExtResource("2_rpse0")
+rotation_speed = 0.002
+
+[node name="comet_axis" type="Node2D" parent="comet"]
+position = Vector2(175, 0)
+script = ExtResource("4_5u8uh")
+oscilate_speed = 2.0
+oscilate_size = 0.35
+
+[node name="Icon2" type="Sprite2D" parent="comet/comet_axis"]
+scale = Vector2(0.0287, 0.0298)
+texture = ExtResource("8_q4abd")
+script = ExtResource("2_rpse0")
+rotation_speed = 0.0002
